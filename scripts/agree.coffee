@@ -4,7 +4,7 @@
 module.exports = (robot) ->
     rex = new RegExp('.*right.*paco.*', 'i')
 
-    responses = ["Agreed", "Of course", "I'm not so sure", "Hell no", "WTF", "If you say so", "Whatever you say"]
+    responses = ["Agreed", "Of course", "Let's take this offline",  "I'm not so sure", "Hell no", "WTF", "If you say so", "Whatever you say"]
 
     punctuation = [".", "...", "!", "!!"]
 
