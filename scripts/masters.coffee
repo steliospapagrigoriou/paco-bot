@@ -14,4 +14,4 @@ module.exports = (robot) ->
         return array[Math.floor(Math.random() * (array.length - 1))]
 
     robot.hear rex, (res) ->
-        res.send "My favourite master is, #{getRandomElement(masters)}, #{res.message.user.name}#{getRandomElement(punctuation)}"
+        res.send "My favourite master is, #{getRandomElement(masters)}, #{getRandomElement(punctuation)}"
