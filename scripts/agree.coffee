@@ -6,7 +6,7 @@ module.exports = (robot) ->
 
     responses = ["Agreed", "Of course", "Let's take this offline",  "I'm not so sure", "Hell no", "WTF", "If you say so", "Whatever you say"]
 
-    punctuation = [".", "...", "!", "!!"]
+    punctuation = [".", "...", "!", "!!", " ;)", " :)"]
 
     getRandomElement = (array) ->
         if array.length is 0
