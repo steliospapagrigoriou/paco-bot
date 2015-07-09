@@ -9,7 +9,9 @@ module.exports = (robot) ->
     punctuation = [".", "...", "!", "!!"]
 
     getRandomElement = (array) ->
-        return array[Math.floor(Math.random() * array.length)]
+        if array.length is 0
+            return undefined
+        return array[Math.floor(Math.random() * (array.length - 1))]
 
     robot.hear rex, (res) ->
         res.reply "#{getRandomElement(responses)}, #{res.message.user.name}#{getRandomElement(punctuation)}"
