@@ -1,0 +1,15 @@
+# Description:
+# Paco will randomly agree/disagree with a user when prompted with "right, paco?"
+
+module.exports = (robot) ->
+    rex = new RegExp('.*right.*paco.*', 'i')
+
+    responses = ["Agreed", "Of course", "I'm not so sure", "Hell no", "WTF", "If you say so", "Whatever you say"]
+
+    punctuation = [".", "...", "!", "!!"]
+
+    getRandomElement = (array) ->
+        return array[Math.floor(Math.random() * array.length)]
+
+    robot.hear rex, (res) ->
+        res.reply "#{getRandomElement(responses)}, #{res.message.user.name}#{getRandomElement(punctuation)}"
